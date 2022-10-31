@@ -15,7 +15,7 @@ def lambda_handler(event, context):
     dynamodb = boto3.resource('dynamodb')
     
     # Change table name
-    table = dynamodb.Table('test')
+    table = dynamodb.Table('codestar-t10-classes')
 
     
     chars=string.ascii_uppercase + string.digits
@@ -29,7 +29,7 @@ def lambda_handler(event, context):
     
     return {
         'statusCode': 200,
-        'body': []
+        'body': 'success to deploy to s3'
     }
     
 
